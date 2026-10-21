@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading… — Tidy Tag</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="brand"><span class="dot"></span> <span id="brandName">Tidy Tag</span></div>
+  <nav>
+    <a href="#builder">Build a quote</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#book">Request a clean</a>
+  </nav>
+  <a class="cta-small" href="#builder">Get a price</a>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Built for lease turnovers &amp; regular homes</div>
+    <h1 id="heroHeadline">A clean that matches<br><em>your lease terms,</em><br>not a guess.</h1>
+    <p class="lede" id="heroLede">Pick your property, the level of clean you actually need, and watch the price update live.</p>
+    <div class="hero-actions">
+      <a href="#builder" class="btn-primary">Build my quote</a>
+      <a href="#reviews" class="link-ghost">See Google reviews</a>
+    </div>
+    <div class="stat-row">
+      <div><div class="stat-num" id="statRating">—</div><div class="stat-label">Google rating</div></div>
+      <div><div class="stat-num">2,300+</div><div class="stat-label">Leases cleaned</div></div>
+      <div><div class="stat-num">98%</div><div class="stat-label">Bond back rate</div></div>
+    </div>
+  </div>
+
+  <div class="tag-wrap">
+    <div class="service-tag">
+      <div class="hole"></div>
+      <div class="tag-inner">
+        <div class="tag-top"><span>SERVICE TAG</span><span class="tag-ref" id="heroRef">#TT-0000</span></div>
+        <p class="tag-title" id="heroTitle">Loading…</p>
+        <p class="tag-sub">Estimated price for your job</p>
+        <div class="tag-price" id="heroPrice">$0<span></span></div>
+        <ul class="tag-list" id="heroList"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="builder">
+  <div class="section-head">
+    <div class="kicker">01 — Build your quote</div>
+    <h2>Tell us about the place</h2>
+    <!-- <p>Every fie ld below feeds the price tag on the right in real time. Options here come from the business's own pricing config, not hardcoded markup.</p> -->
+  </div>
+
+  <div class="builder-grid">
+    <div>
+      <div class="field-group">
+        <label class="group-label">Property type</label>
+        <div class="pill-row" id="propertyType"><div class="skeleton">Loading options…</div></div>
+      </div>
+
+      <div class="field-group">
+        <label class="group-label">Bedrooms &amp; bathrooms</label>
+        <div class="stepper-row">
+          <div class="stepper">
+            <button data-target="bed" data-dir="-1" type="button">–</button>
+            <div class="val" id="bedVal">2</div>
+            <button data-target="bed" data-dir="1" type="button">+</button>
+          </div>
+          <span class="stepper-label">bedrooms</span>
+          <div class="stepper">
+            <button data-target="bath" data-dir="-1" type="button">–</button>
+            <div class="val" id="bathVal">1</div>
+            <button data-target="bath" data-dir="1" type="button">+</button>
+          </div>
+          <span class="stepper-label">bathrooms</span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="group-label">Level of clean</label>
+        <div class="tier-cards" id="cleanTier"><div class="skeleton">Loading options…</div></div>
+      </div>
+
+      <div class="field-group">
+        <label class="group-label">Add-ons</label>
+        <div class="addon-grid" id="addons"><div class="skeleton">Loading options…</div></div>
+      </div>
+
+      <div class="field-group">
+        <label class="group-label">Frequency</label>
+        <div class="freq-row" id="freq"><div class="skeleton">Loading options…</div></div>
+      </div>
+    </div>
+
+    <div class="builder-tag">
+      <div class="service-tag" style="transform:rotate(1.5deg);">
+        <div class="hole"></div>
+        <div class="tag-inner">
+          <div class="tag-top"><span>YOUR ESTIMATE</span><span class="tag-ref" id="builderRef">#TT-0000</span></div>
+          <p class="tag-title" id="builderTitle">Loading…</p>
+          <p class="tag-sub" id="builderFreq">—</p>
+          <div class="tag-price" id="builderPrice">$0<span></span></div>
+          <ul class="tag-list" id="builderList"></ul>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:18px;">
+        <a href="#book" class="btn-primary" style="width:100%;">Request this clean</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-head">
+    <div class="kicker">02 — Google reviews</div>
+    <h2>What tenants &amp; homeowners say</h2>
+    <!-- <p>Pulled live from the business's Google Business Profile when a Place ID and API key are configured; otherwise sample reviews are shown.</p> -->
+  </div>
+
+  <div class="review-agg">
+    <div class="g-badge">G</div>
+    <div>
+      <div style="display:flex;align-items:baseline;gap:10px;">
+        <span id="aggRating" style="font-size:26px;font-weight:600;font-family:'IBM Plex Mono',monospace;">—</span>
+        <span class="stars" id="aggStars">—</span>
+      </div>
+      <div style="font-size:12px;color:var(--ink-soft);" id="aggTotal">Loading reviews…</div>
+    </div>
+  </div>
+
+  <div class="review-grid" id="reviewGrid"></div>
+</section>
+
+<section id="book">
+  <div class="section-head">
+    <div class="kicker">03 — Request a clean</div>
+    <h2>Send us the job</h2>
+    <p>Submitting this locks in your estimate above and emails the booking team the moment it lands — you'll get a copy too.</p>
+  </div>
+
+  <form class="form-grid" id="bookingForm">
+    <div class="form-field"><label>Full name</label><input type="text" id="f_name" required></div>
+    <div class="form-field"><label>Email</label><input type="email" id="f_email" required></div>
+    <div class="form-field"><label>Phone</label><input type="tel" id="f_phone" required></div>
+    <div class="form-field"><label>Preferred date</label><input type="date" id="f_date" required></div>
+    <div class="form-field full"><label>Property address</label><input type="text" id="f_address" placeholder="Unit / street, suburb" required></div>
+    <div class="form-field full"><label>Notes for the cleaning team</label><textarea id="f_notes" placeholder="Access instructions, pets, parking, anything the team should know"></textarea></div>
+
+    <div class="full submit-row">
+      <button type="submit" class="btn-primary" id="submitBtn">Send request</button>
+      <span style="font-size:12px;color:#AEB8B1;">Your live estimate is attached automatically.</span>
+    </div>
+
+    <div class="confirm-box full" id="confirmBox"></div>
+  </form>
+</section>
+
+<footer>
+  <span id="footerName">Tidy Tag — house &amp; lease cleaning</span>
+  <span>Prices shown are estimates; final quote confirmed after booking review.</span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

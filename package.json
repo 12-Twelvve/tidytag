@@ -1,0 +1,18 @@
+{
+  "name": "tidy-tag-cleaning-platform",
+  "version": "1.0.0",
+  "description": "House & lease cleaning booking platform — dynamic pricing, Google reviews, booking emails.",
+  "main": "server/index.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.13",
+    "@google-cloud/firestore": "^7.9.0"
+  }
+}

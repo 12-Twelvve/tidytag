@@ -1,0 +1,4 @@
+SMTP_HOST: smtp.gmail.com
+SMTP_PORT: "587"
+SMTP_FROM: "Tidy Tag <koobear99@gmail.com>"
+GOOGLE_PLACE_ID: ChIJeSj6qSauEmsRrzx4VR45nPs
